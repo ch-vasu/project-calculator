@@ -1,15 +1,20 @@
 body{
   background-color: slategrey;
+  height: auto;
 }
 #calc-body{
     border: 1px solid lavender;
     border-radius: 10px;
-    padding: 15px;
+    padding-left:5vw;
+    padding-right: 5vw;
+    padding-bottom: 5vh;
+    padding-top: 5vh;
     position: absolute;
     top:50%;
     left: 50%;
     transform: translate(-50%,-50%);
     width: 25%;
+
 }
 input[type="text"]{
   border:2px solid black;
@@ -23,6 +28,7 @@ input[type="text"]{
   display: grid;
   grid-template-columns: auto auto auto auto;
   grid-row-gap: 3vh;
+
 }
 
 .buttons{
@@ -31,6 +37,7 @@ input[type="text"]{
   border-radius: 10px;
   border:2px solid black;
   font-weight: bolder;
+  font-size: 1em;
 }
 #cal{
   width: 95%;
@@ -41,4 +48,39 @@ input[type="text"]{
   color:white;
   font-weight: 900;
   border:2px solid white;
+}
+#logo-v{
+  color:white;
+  font-family: 'Sacramento', cursive;
+  font-size: 300%;
+  text-align: center;
+  /* border:1px solid red; */
+  margin-bottom:0px;
+  margin-top:0px;
+}
+#title{
+  text-align: center;
+  font-family: 'Damion', cursive;
+  color:white;
+
+  margin-top:0px;
+}
+
+@media only screen and (max-width:1080px) {
+#calc-body{
+  width: 70%;
+  position: static;
+  transform: none;
+  margin:10vw;
+  height: 100vh;
+}
+#buttons-panel{
+  border:2px solid red;
+  height: 70%;
+}
+.buttons{
+  height: auto;
+  padding: 5px;
+}
+
 }
