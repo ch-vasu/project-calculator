@@ -9,7 +9,7 @@ function reset(){
 function inputExpression(data){
 
     result +=data;
-     window.alert(result);
+
     document.getElementById("input-data").value=result;
 }
 
@@ -22,7 +22,7 @@ function calculate(){
   catch(err){
     document.getElementById("input-data").style.border="2px solid red";
     document.getElementById("input-data").style.color="red";
-    document.getElementById("input-data").style.text-align="center";
+
     evalValue="Syntax Error";
   }
   document.getElementById("input-data").value=evalValue;
