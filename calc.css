@@ -1,15 +1,25 @@
+html{
+  width: 100%;
+}
 body{
-  background-color: slategrey;
+  /* background-color: slategrey; */
+  background-color: steelblue;
+
+  height: auto;
 }
 #calc-body{
-    border: 1px solid lavender;
-    border-radius: 10px;
-    padding: 15px;
+    border: 2px solid lavender;
+    border-radius: 20px;
+    padding-left:5vw;
+    padding-right: 5vw;
+    padding-bottom: 5vh;
+    padding-top: 5vh;
     position: absolute;
     top:50%;
     left: 50%;
     transform: translate(-50%,-50%);
     width: 25%;
+
 }
 input[type="text"]{
   border:2px solid black;
@@ -23,6 +33,7 @@ input[type="text"]{
   display: grid;
   grid-template-columns: auto auto auto auto;
   grid-row-gap: 3vh;
+
 }
 
 .buttons{
@@ -31,14 +42,109 @@ input[type="text"]{
   border-radius: 10px;
   border:2px solid black;
   font-weight: bolder;
+  font-size: 1em;
 }
 #cal{
   width: 95%;
   grid-area: 5 / 3 / span 1 / span 2;
 }
 .buttons:hover{
-  background-color: indianred;
+  background-color: red;
   color:white;
   font-weight: 900;
   border:2px solid white;
+}
+#logo-v{
+  color:white;
+  font-family: 'Sacramento', cursive;
+  font-size: 300%;
+  text-align: center;
+  /* border:1px solid red; */
+  margin-bottom:0px;
+  margin-top:0px;
+}
+#title{
+  text-align: center;
+  font-family: 'Damion', cursive;
+  color:white;
+
+  margin-top:0px;
+}
+.contacts{
+  background-color: ghostwhite;
+  position: absolute;
+  top:100%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 100%;
+  text-align: center;
+}
+#links{
+  color:royalblue;
+}
+#links a{
+  text-decoration: none;
+  color:royalblue;
+  font-weight: bolder;
+  padding:2px;
+}
+#links a:hover{
+  color:red;
+  text-decoration: underline;
+}
+header{
+  background-color: white;
+  height: 11vh;
+  margin-top:-3.5vh;
+  padding-top: 0.5vh;
+  padding-bottom: 0.1vh;
+  margin-left: -1vw;
+  margin-right: -0.56vw;
+  font-family: 'Courgette', cursive;
+  color:indigo;
+  font-weight: 400;
+  text-align: center;
+}
+
+
+@media only screen and (max-width:1080px) {
+#calc-body{
+  width: 70%;
+  position: static;
+  transform: none;
+  margin:10vw;
+  height: 80vh;
+
+}
+#buttons-panel{
+  height: 70%;
+}
+.buttons{
+  height: auto;
+  padding: 2px;
+  font-size: 2em;
+}
+input[type="text"]{
+  border:2px solid white;
+  height: 3vh;
+  font-size: 3em;
+  }
+.titles{
+  font-size: 5em;
+}
+#logo-v{
+  font-size: 5em;
+}
+.contacts{
+  margin-top:20vh;
+  font-size: 2em;
+}
+.text-area{
+  height: auto;
+  margin: auto;
+  margin-top:-0.5vh;
+  margin-left: -0.7vw;
+  margin-right: -0.7vw;
+  font-size: 2em;
+}
 }
