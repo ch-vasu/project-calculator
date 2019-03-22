@@ -3,17 +3,28 @@ result="";
 function reset(){
   result="";
   document.getElementById("input-data").value=0;
+  document.getElementById("input-data").style.border="2px solid black";
+  document.getElementById("input-data").style.color="black";
 }
 function inputExpression(data){
+
     result +=data;
-    // window.alert(result);
+     window.alert(result);
     document.getElementById("input-data").value=result;
 }
 
 function calculate(){
   let evalValue;
   evalValue=document.getElementById("input-data").value;
-  evalValue=eval(evalValue);
+  try{
+    evalValue=eval(evalValue);
+  }
+  catch(err){
+    document.getElementById("input-data").style.border="2px solid red";
+    document.getElementById("input-data").style.color="red";
+    document.getElementById("input-data").style.text-align="center";
+    evalValue="Syntax Error";
+  }
   document.getElementById("input-data").value=evalValue;
   result=evalValue;
 }
