@@ -72,10 +72,17 @@ input[type="text"]{
 }
 .contacts{
   background-color: ghostwhite;
-  position: absolute;
+  /* position: absolute;
   top:100%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%); */
+
+  position: relative;
+
+  /* margin-top:40%; */
+  /* padding-top:1vh; */
+  padding-bottom: 1vh;
+  top:80vh;
   width: 100%;
   text-align: center;
 }
@@ -107,6 +114,7 @@ header{
 }
 
 
+
 @media only screen and (max-width:1080px) {
 #calc-body{
   width: 70%;
@@ -136,7 +144,8 @@ input[type="text"]{
   font-size: 5em;
 }
 .contacts{
-  margin-top:20vh;
+  /* margin-top:20vh; */
+  top:0vh;
   font-size: 2em;
 }
 .text-area{
