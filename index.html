@@ -3,21 +3,29 @@
     <head>
         <meta charset="utf-8">
         <title>Calculator</title>
+         <link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
+         <link href="https://fonts.googleapis.com/css?family=Damion" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
         <link rel="stylesheet" href="./calc.css">
         <script src="./calc.js"></script>
     </head>
     <body>
+      <header class="text-area">
+        <h1>PROJECT-0 : THE CALCULATOR</h1>
+      </header>
         <div id="calc-body">
+          <h1 id="logo-v" class="titles">V</h1>
+          <h2 id="title" class="titles">THE  CALCULATOR</h2>
           <input type="text" name="data" id="input-data" class="input">
         <div id="buttons-panel">
             <button id="ac" class="buttons" onclick="reset()">AC</button>
-            <button id="rem" class="buttons" onclick="inputExpression('Rem')">Rem</button>
+            <button id="rem" class="buttons" onclick="inputExpression('%')">Rem</button>
             <button id="mul" class="buttons" onclick="inputExpression('*')">X</button>
             <button id="div" class="buttons" onclick="inputExpression('/')">/</button>
             <button id="num-7" class="buttons" onclick="inputExpression(String(7))">7</button>
             <button id="num-8" class="buttons" onclick="inputExpression(String(8))">8</button>
             <button id="num-9" class="buttons" onclick="inputExpression(String(8))">9</button>
-            <button id="perc" class="buttons" onclick="inputExpression('%')">%</button>
+            <button id="perc" class="buttons" onclick="inputExpression('**')">Pow</button>
             <button id="num-4" class="buttons" onclick="inputExpression(String(4))">4</button>
             <button id="num-5" class="buttons" onclick="inputExpression(String(5))">5</button>
             <button id="num-6" class="buttons" onclick="inputExpression(String(6))">6</button>
@@ -29,8 +37,18 @@
             <button id="num-0" class="buttons" onclick="inputExpression(String(0))">0</button>
             <button id="point" class="buttons" onclick="inputExpression('.')">.</button>
             <button id="cal" class="buttons" onclick="calculate()">Cal</button>
-
         </div>
       </div>
+      <div class="contacts">
+        <h3 style="color:red;">Contact:</h3>
+        <p id="links">
+          <a href="mailto:ch.vasu678@gmail.com" target="_blank">Email</a> |
+            <a href="https://twitter.com/VasuCh10" target="_blank">Twitter </a>|
+            <a href="https://www.facebook.com/vasu.ch.1291" target="_blank">Facebook</a> |
+            <a href="https://www.linkedin.com/in/vasu-ch/" target="_blank">LinedIn</a> |
+            <a href="https://www.instagram.com/vasu_ch_/" target="_blank">Instagram</a>
+        </p>
+      </div>
+
     </body>
 </html>
