@@ -7,6 +7,8 @@ body{
 
   height: auto;
 }
+
+
 #calc-body{
     border: 2px solid lavender;
     border-radius: 20px;
@@ -31,7 +33,7 @@ input[type="text"]{
 }
 #buttons-panel{
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto auto auto auto autowftfsz;
   grid-row-gap: 3vh;
 
 }
@@ -46,7 +48,7 @@ input[type="text"]{
 }
 #cal{
   width: 95%;
-  grid-area: 5 / 3 / span 1 / span 2;
+  grid-area: 5 / 4 / span 1 / span  2;
 }
 .buttons:hover{
   background-color: red;
@@ -70,35 +72,41 @@ input[type="text"]{
 
   margin-top:0px;
 }
-.contacts{
-  background-color: ghostwhite;
-  /* position: absolute;
-  top:100%;
-  left: 50%;
-  transform: translate(-50%,-50%); */
 
-  position: relative;
+#radios span{
+  display: inline-block;
+  color:white;
+  font-weight: bolder;
+  margin-bottom: 1vh;
+  font-size: 1em;
+  text-align:center;
+}
+#radios{
 
-  /* margin-top:40%; */
-  /* padding-top:1vh; */
-  padding-bottom: 1vh;
-  top:80vh;
-  width: 100%;
   text-align: center;
 }
-#links{
-  color:royalblue;
+#container {
+	display: flex;
+	flex-direction: row;
+	/* column-gap: 1vw; */
+	margin-top: -5vh;
+	justify-content: flex-end;
+	background-color: transparent;
 }
-#links a{
+.images{
+  height: 4vh;
+  border-radius: 10px;
+  margin-right: 0.5vw;
+}
+#container a{
   text-decoration: none;
-  color:royalblue;
-  font-weight: bolder;
-  padding:2px;
 }
-#links a:hover{
-  color:red;
-  text-decoration: underline;
+#container em{
+  color:mediumblue;
 }
+
+
+
 header{
   background-color: white;
   height: 11vh;
@@ -143,11 +151,7 @@ input[type="text"]{
 #logo-v{
   font-size: 5em;
 }
-.contacts{
-  /* margin-top:20vh; */
-  top:0vh;
-  font-size: 2em;
-}
+
 .text-area{
   height: auto;
   margin: auto;
@@ -156,4 +160,22 @@ input[type="text"]{
   margin-right: -0.7vw;
   font-size: 2em;
 }
+
+span{
+  font-size: 2em;
+}
+input[type="radio"]{
+  transform: scale(2);
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
+#container{
+  height: 1vh;
+  margin-top:-1vh;
+}
+.images{
+  height: 0.8vh;
+}
+
+
 }
