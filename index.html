@@ -7,48 +7,77 @@
          <link href="https://fonts.googleapis.com/css?family=Damion" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
         <link rel="stylesheet" href="./calc.css">
-        <script src="./calc.js"></script>
+
     </head>
-    <body>
+    <body onload="reset()">
       <header class="text-area">
         <h1>PROJECT-0 : THE CALCULATOR</h1>
       </header>
+      <nav id="navbar">
+    		<div id="container">
+          <em>Connect to Developer : &nbsp;</em>
+    		<a href="mailto:ch.vasu678@gmail.com">
+          <img src="http://www.sulc.edu/wp-content/uploads/2015/10/Email-Logo.jpg" alt="Email" class="images">
+        </a>
+    		<a href="https://www.linkedin.com/in/vasu-ch/">
+          <img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/square-linkedin-512.png" alt="LinkedIn"  class="images">
+        </a>
+    		<a href="https://twitter.com/VasuCh10">
+          <img src="https://pbs.twimg.com/profile_images/1092100446586630146/3uFY0wpD_400x400.jpg" alt="Twitter" class="images">
+        </a>
+        <a href="https://www.facebook.com/vasu.ch.1291">
+          <img src="https://www.facebook.com/images/fb_icon_325x325.png" alt="Facebook" class="images">
+        </a>
+        <a href="https://www.instagram.com/vasu_ch_/">
+          <img src="https://instagram-brand.com/wp-content/themes/ig-branding/assets/images/ig-logo-email.png" alt="Instagram" class="images">
+        </a>
+    		</div>
+    	</nav>
         <div id="calc-body">
           <h1 id="logo-v" class="titles">V</h1>
           <h2 id="title" class="titles">THE  CALCULATOR</h2>
+          <div id="radios">
+          <input type="radio" name="mode" value="basic" id="basic" onclick="change()" checked><span id="bas"> Basic Keys</span>
+          <input type="radio" name="mode" value="advanced" id="advanced" onclick="change()"><span id="adv"> Trigonometric Keys</span>
+        </div>
           <input type="text" name="data" id="input-data" class="input">
         <div id="buttons-panel">
+
+          <!-- row -1   -->
             <button id="ac" class="buttons" onclick="reset()">AC</button>
-            <button id="rem" class="buttons" onclick="inputExpression('%')">Rem</button>
-            <button id="mul" class="buttons" onclick="inputExpression('*')">X</button>
-            <button id="div" class="buttons" onclick="inputExpression('/')">/</button>
-            <button id="num-7" class="buttons" onclick="inputExpression(String(7))">7</button>
-            <button id="num-8" class="buttons" onclick="inputExpression(String(8))">8</button>
-            <button id="num-9" class="buttons" onclick="inputExpression(String(8))">9</button>
-            <button id="perc" class="buttons" onclick="inputExpression('**')">Pow</button>
-            <button id="num-4" class="buttons" onclick="inputExpression(String(4))">4</button>
-            <button id="num-5" class="buttons" onclick="inputExpression(String(5))">5</button>
-            <button id="num-6" class="buttons" onclick="inputExpression(String(6))">6</button>
-            <button id="sub" class="buttons" onclick="inputExpression('-')">-</button>
-            <button id="num-1" class="buttons" onclick="inputExpression(String(1))">1</button>
-            <button id="num-2" class="buttons" onclick="inputExpression(String(2))">2</button>
-            <button id="num-3" class="buttons" onclick="inputExpression(String(3))">3</button>
-            <button id="add" class="buttons" onclick="inputExpression('+')">+</button>
-            <button id="num-0" class="buttons" onclick="inputExpression(String(0))">0</button>
-            <button id="point" class="buttons" onclick="inputExpression('.')">.</button>
+            <button id="log" class="buttons" onclick="expression('Math.log(','log(')" >log</button>
+            <button id="root" class="buttons" onclick="expression('Math.sqrt(','\u221A (')">&Sqrt;</button>
+            <button id="rem" class="buttons" onclick="expression('%','%')">Rem</button>
+            <button id="div" class="buttons" onclick="expression('/','/')">/</button>
+
+          <!-- row-2  -->
+            <button id="num-7" class="buttons" onclick="expression(String(7),String(7))">7</button>
+            <button id="num-8" class="buttons" onclick="expression(String(8),String(8))">8</button>
+            <button id="num-9" class="buttons" onclick="expression(String(9),String(9))">9</button>
+            <button id="pow" class="buttons" onclick="expression('**','^')">Pow</button>
+            <button id="mul" class="buttons" onclick="expression('*','*')">X</button>
+
+            <!-- Row-3  -->
+            <button id="num-4" class="buttons" onclick="expression(String(4),String(4))">4</button>
+            <button id="num-5" class="buttons" onclick="expression(String(5),String(5))">5</button>
+            <button id="num-6" class="buttons" onclick="expression(String(6),String(6))">6</button>
+            <button id="perc" class="buttons" onclick="expression('(','(')">(</button>
+            <button id="sub" class="buttons" onclick="expression('-','-')">-</button>
+
+            <!-- Row-4  -->
+            <button id="num-1" class="buttons" onclick="expression(String(1),String(1))">1</button>
+            <button id="num-2" class="buttons" onclick="expression(String(2),String(2))">2</button>
+            <button id="num-3" class="buttons" onclick="expression(String(3),String(3))">3</button>
+            <button id="perc" class="buttons" onclick="expression(')',')')">)</button>
+            <button id="add" class="buttons" onclick="expression('+','+')">+</button>
+
+            <!-- Row-5   -->
+            <button id="num-0" class="buttons" onclick="expression(String(0),String(0))">0</button>
+            <button id="point" class="buttons" onclick="expression('.','.')">.</button>
+            <button id="pi" class="buttons" onclick="expression('Math.PI','PI')">PI</button>
             <button id="cal" class="buttons" onclick="calculate()">Cal</button>
         </div>
       </div>
-      <div class="contacts">
-        <h3 style="color:red;">Contact:</h3>
-        <p id="links">
-          <a href="mailto:ch.vasu678@gmail.com" target="_blank">Email</a> |
-            <a href="https://twitter.com/VasuCh10" target="_blank">Twitter </a>|
-            <a href="https://www.facebook.com/vasu.ch.1291" target="_blank">Facebook</a> |
-            <a href="https://www.linkedin.com/in/vasu-ch/" target="_blank">LinedIn</a> |
-            <a href="https://www.instagram.com/vasu_ch_/" target="_blank">Instagram</a>
-        </p>
-      </div>
-
+      <script src="./calc.js"></script>
     </body>
 </html>
